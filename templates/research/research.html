@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Research
+{% endblock %}
+
+{% block content %}
+    <!-- Research Interests -->
+    <section id="testimonials" class="parallax">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="section-title text-center white ">
+                        <h2>Research Interests</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div id="testimonial" style="font-size: small">
+                        <div class="testimonial-item text-center" style="padding-bottom: 150px">
+                            <div class="clearfix">
+                                <span>睡眠结构随发育改变的环路和分子机制</span>
+                                <p>
+                                    睡眠结构随发育改变的环路和分子机制睡眠结构随发育改变的环路和分子机制睡眠结构随发育改变的环路和分子机制睡眠结构随发育改变的环路和分子机制睡眠结构随发育改变的环路和分子机制的介绍</p>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="testimonial-item text-center" style="padding-bottom: 150px">
+                            <div class="clearfix">
+                                <span>发育过程中睡眠对行为功能（如社交行为）的影响及机制</span>
+                                <p>
+                                    睡眠结构随发育改变的环路和分子机制睡眠结构随发育改变的环路和分子机制睡眠结构随发育改变的环路和分子机制睡眠结构随发育改变的环路和分子机制睡眠结构随发育改变的环路和分子机制的介绍</p>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="testimonial-item text-center" style="padding-bottom: 150px">
+                            <div class="clearfix">
+                                <span>多种神经系统发育障碍（如孤独症、精神分裂症）中睡眠障碍的发生机制及对行为异常的贡献</span>
+                                <p>
+                                    睡眠结构随发育改变的环路和分子机制睡眠结构随发育改变的环路和分子机制睡眠结构随发育改变的环路和分子机制睡眠结构随发育改变的环路和分子机制睡眠结构随发育改变的环路和分子机制的介绍</p>
+                            </div>
+                        </div>
+                        <hr/>
+                        {% for each in research %}
+                            <div class="testimonial-item text-center" style="padding-bottom: 150px">
+                                <div class="clearfix">
+                                    <span>{{ each.title }}</span>
+                                    <p>
+                                        {{ each.detail }}</p>
+                                </div>
+                            </div>
+                            <hr/>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

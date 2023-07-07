@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ member.name }}
+{% endblock %}
+
+{% block content %}
+    <section id="feature">
+        <div class="container">
+            <div class="row" style="align-items: center; padding: 30px">
+
+                <div class="col-md-3">
+                    <img class="img-fluid" src="{{ member.photo.url }}" alt="">
+                </div>
+                <div class="col-md-9" style="padding-left: 50px;">
+                    <!-- Name -->
+                    <div style="text-align: center">
+                        <h3 style="color: #0aa6bd">{{ member.name }}</h3>
+                        <p style="font-size: large"><b><i>{{ member.position }}</i></b></p><br/>
+                    </div>
+                    <!-- detail -->
+                    <p>{{ member.detail }}</p>
+                    <!-- E-mail -->
+                    <br/>
+                    <p>E-mail: <a href="mailto:{{ member.email }}">{{ member.email }}</a></p>
+
+                </div>
+
+            </div>
+
+            <hr/>
+            <!-- 其他信息，如研究兴趣和其他兴趣等 -->
+            <div style="padding: 30px">
+                <h5 style="color: #0aa6bd">Research Interest</h5>
+                <p>{{ member.researchInterest }}</p>
+            </div>
+            {% if member.interest == '' %}
+            {% else %}
+                <hr/>
+                <div style="padding: 30px">
+                    <h5 style="color: #0aa6bd">Interest</h5>
+                    <p>{{ member.interest }}</p>
+                </div>
+            {% endif %}
+
+        </div>
+    </section>
+
+{% endblock %}

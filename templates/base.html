@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<!--[if lt IE 7]>
+<html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- meta character set -->
+    <meta charset="utf-8">
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{% block title %}
+
+    {% endblock %}</title>
+
+
+    <!-- Meta Description -->
+    <meta name="description" content="Blue One Page Creative HTML5 Template">
+    <meta name="keywords"
+          content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
+    <meta name="author" content="Themefisher">
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="blue-pro"/>
+
+    <!-- CSS
+        ================================================== -->
+
+{#    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">#}
+
+    <!-- Fontawesome Icon font -->
+    <link rel="stylesheet" href="{% static 'plugins/font-awesome.min.css' %}">
+    <!-- Ion Icons Font -->
+    <link rel="stylesheet" href="{% static 'plugins/ionicons.min.css' %}">
+    <!-- bootstrap.min -->
+    <link rel="stylesheet" href="{% static 'plugins/jquery.fancybox.css' %}">
+    <!-- bootstrap.min -->
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+    <!-- bootstrap.min -->
+    <link rel="stylesheet" href="{% static 'plugins/owl.carousel.css' %}">
+    <!-- bootstrap.min -->
+    <link rel="stylesheet" href="{% static 'plugins/slit-slider.css' %}">
+    <!-- bootstrap.min -->
+    <link rel="stylesheet" href="{% static 'plugins/animate.css' %}">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Modernizer Script for old Browsers -->
+    <script src="{% static 'plugins/modernizr-2.6.2.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        .footer {
+            margin-top: -50px;
+            height: 50px;
+            background-color: #eee;
+            z-index: 9999;
+        }
+
+        .wrap {
+            min-height: 100%;
+        }
+
+        .main {
+            padding-bottom: 50px;
+        }
+    </style>
+
+</head>
+
+<header id="navigation" class="fixed-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="{% url 'home' %}" style="">
+                <b style="color: whitesmoke; font-size: x-large">Bian Lab</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto text-center" id="nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'research' %}">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'team' %}">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'publication' %}">Publication</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'news' %}">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'galleryLife' %}">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<body>
+<main class="site-content" role="main">
+    {% block content %}
+    {% endblock %}
+</main>
+
+
+<footer id="footer">
+    <div class="container">
+        <div class="row" style="text-align: center">
+            <div class="col-md-6" style="margin: auto">
+                <a href="{% url 'home' %}">
+                    <b style="color: whitesmoke; font-size: x-large">Bian Lab</b>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="https://www.westlake.edu.cn">Westlake University</a>
+                <p>Shilongshan ST #18, Xihu District, Hangzhou, Zhejiang Province, CN</p>
+                <p>中国浙江省杭州市西湖区云栖小镇石龙山街18号</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<section id="footer-bottom">
+    <div class="container">
+        <p class="text-center">
+            COPYRIGHT © 2023 , Bian Lab
+        </p>
+    </div>
+</section>
+
+</body>
+</html>
