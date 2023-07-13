@@ -20,7 +20,7 @@
                         <p style="font-size: large"><b><i>{{ member.position }}</i></b></p><br/>
                     </div>
                     <!-- detail -->
-                    <p>{{ member.detail }}</p>
+                    <p><b>Biography: </b>{{ member.detail }}</p>
                     <!-- E-mail -->
                     <br/>
                     <p>E-mail: <a href="mailto:{{ member.email }}">{{ member.email }}</a></p>
@@ -28,21 +28,21 @@
                 </div>
 
             </div>
-
-            <hr/>
-            <!-- 其他信息，如研究兴趣和其他兴趣等 -->
-            <div style="padding: 30px">
-                <h5 style="color: #0aa6bd">Research Interest</h5>
-                <p>{{ member.researchInterest }}</p>
-            </div>
-            {% if member.interest == '' %}
-            {% else %}
-                <hr/>
-                <div style="padding: 30px">
-                    <h5 style="color: #0aa6bd">Interest</h5>
-                    <p>{{ member.interest }}</p>
-                </div>
-            {% endif %}
+{##}
+{#            <hr/>#}
+{#            <!-- 其他信息，如研究兴趣和其他兴趣等 -->#}
+{#            <div style="padding: 30px">#}
+{#                <h5 style="color: #0aa6bd">Research Interest</h5>#}
+{#                <p>{{ member.researchInterest }}</p>#}
+{#            </div>#}
+{#            {% if member.interest == '' %}#}
+{#            {% else %}#}
+{#                <hr/>#}
+{#                <div style="padding: 30px">#}
+{#                    <h5 style="color: #0aa6bd">Interest</h5>#}
+{#                    <p>{{ member.interest }}</p>#}
+{#                </div>#}
+{#            {% endif %}#}
 
         </div>
     </section>

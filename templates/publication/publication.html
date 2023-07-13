@@ -20,39 +20,7 @@
             </div>
         </div>
         <div class="container">
-            <!-- publication sheet -->
-            <div class="row" style="align-items: center;">
-                <!-- publication的缩略图 -->
-                <div class="col-md-4" style="padding-right: 50px">
-                    <img class="img-fluid" src="{% static 'images/publication/1.png' %}" alt="">
-                </div>
-                <!-- publication的简介 -->
-                <div class="col-md-8">
-                    <h6><i>Sleep 2023</i></h6>
-                    <h6><b>Adolescent sleep defects and dopaminergic hyperactivity in mice with a schizophrenia-linked
-                        Shank3 mutation</b></h6>
-                    <p><b>Bian WJ*</b>, González OC, de Lecea L*. </p>
-                    <a href="https://www.sciencedirect.com/science/article/pii/S0092867415008958"><i
-                            class="fa fa-paper-plane fa-lg" style="color: #0aa6bd"></i> View details</a>
-                </div>
-            </div>
-            <hr/>
 
-            <div class="row" style="align-items: center;">
-                <!-- publication的缩略图 -->
-                <div class="col-md-4" style="padding-right: 50px">
-                    <img class="img-fluid" src="{% static 'images/publication/1.png' %}" alt="">
-                </div>
-                <!-- publication的简介 -->
-                <div class="col-md-8">
-                    <h6><i>Sleep 2023</i> &nbsp;&nbsp; <a href="https://www.sciencedirect.com/science/article/pii/S0092867415008958">Link</a></h6>
-                    <h6><b>Adolescent sleep defects and dopaminergic hyperactivity in mice with a schizophrenia-linked
-                        Shank3 mutation</b></h6>
-                    <p><b>Bian WJ*</b>, González OC, de Lecea L*. </p>
-
-                </div>
-            </div>
-            <hr/>
 
             {% for paper in publication %}
                 <!-- publication sheet -->
@@ -64,7 +32,7 @@
                     <!-- publication的简介 -->
                     <div class="col-md-8">
                         <h6><i>{{ paper.journal }} {{ paper.year }}</i> &nbsp;&nbsp;
-                        <a href="{{ paper.link }}"> Link</a></h6>
+                        <a href="{{ paper.link }}" target="_blank"> Link</a></h6>
 
                         <h6><b>{{ paper.title }}</b></h6>
                         <p>{{ paper.author }}</p>

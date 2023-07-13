@@ -18,69 +18,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="row" style="align-items: center">
 
-                <div class="col-md-8" style="padding-left: 150px">
-                    <!-- Name -->
-                    <h3>Wenjie Bian</h3>
-                    <!-- Position -->
-                    <p><b><i>Principle Investigator</i></b></p><br/>
-                    <!-- Background -->
-                    <h6>Stanford University</h6>
-                    <!-- Bio -->
-                    <h6 style="word-break: break-word; font-family: Ubuntu,serif">
-                        "Do interesting science and be an interesting soul." </h6>
-                    <!-- E-mail -->
-                    <p>E-mail: <a href="mailto:bianwenjie@westlake.edu.cn">bianwenjie@westlake.edu.cn</a></p>
-
-                </div>
-                <div class="col-md-3">
-                    <img class="img-fluid" src="{% static 'images/team/wenjiebian.png' %}" alt="">
-                </div>
-            </div>
-            <hr/>
-            <div class="row" style="align-items: center">
-
-                <div class="col-md-8" style="padding-left: 150px">
-                    <!-- Name -->
-                    <h3>Wenjie Bian</h3>
-                    <!-- Position -->
-                    <p><b><i>Principle Investigator</i></b></p><br/>
-                    <!-- Background -->
-                    <h6>Stanford</h6>
-                    <!-- Bio -->
-                    <h6 style="word-break: break-word; font-family: Ubuntu,serif">Curiosity is the gas for the vehicle
-                        of science that can lead you to far beyond people can reach</h6>
-                    <!-- E-mail -->
-                    <p>E-mail: <a href="mailto:bianwenjie@westlake.edu.cn">bianwenjie@westlake.edu.cn</a></p>
-
-                </div>
-                <div class="col-md-3">
-                    <img class="img-fluid" src="{% static 'images/team/wenjiebian.png' %}" alt="">
-                </div>
-            </div>
-            <hr/>
-            <div class="row" style="align-items: center">
-
-                <div class="col-md-8" style="padding-left: 150px">
-                    <!-- Name -->
-                    <h3>Wenjie Bian</h3>
-                    <!-- Position -->
-                    <p><b><i>Principle Investigator</i></b></p><br/>
-                    <!-- Background -->
-                    <h6>Postdoc in Albert Eistein College of Medicine</h6>
-                    <!-- Bio -->
-                    <h6 style="word-break: break-word; font-family: Ubuntu,serif">Turning your ear to wisdom and
-                        applying your heart to understanding</h6>
-                    <!-- E-mail -->
-                    <p>E-mail: <a href="mailto:bianwenjie@westlake.edu.cn">bianwenjie@westlake.edu.cn</a></p>
-
-                </div>
-                <div class="col-md-3">
-                    <img class="img-fluid" src="{% static 'images/team/wenjiebian.png' %}" alt="">
-                </div>
-            </div>
-            <hr/>
 
             {% for member in team %}
                 <!-- publication sheet -->
@@ -98,10 +36,11 @@
                         <p>E-mail: <a href="{{ member.email }}">{{ member.email }}</a></p>
 
                     </div>
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="{{ member.photo.url }}" alt="">
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <img class="img-fluid" src="{{ member.photo.url }}" alt="">
-                </div>
+
                 <hr/>
 
             {% endfor %}

@@ -9,8 +9,8 @@ from researchApp.models import Research
 
 class ResearchAdmin(object):
     """xadmin后台注册"""
-    list_display = ['id', 'title', 'detail']
-    fields = ['title', 'detail']
+    list_display = ['id', 'title', 'detail', 'photo']
+    fields = ['title', 'detail', 'photo']
 
 
 xadmin.site.register(Research, ResearchAdmin)
