@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 
+
 <!--
  // WEBSITE: https://themefisher.com
  // TWITTER: https://twitter.com/themefisher
@@ -21,6 +22,8 @@
 <head>
     <!-- meta character set -->
     <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=0, maximum-scale=0, user-scalable=yes,shrink-to-fit=no">
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{% block title %}
@@ -43,7 +46,7 @@
     <!-- CSS
         ================================================== -->
 
-{#    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">#}
+    {#    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">#}
 
     <!-- Fontawesome Icon font -->
     <link rel="stylesheet" href="{% static 'plugins/font-awesome.min.css' %}">
@@ -65,6 +68,9 @@
     <!-- Modernizer Script for old Browsers -->
     <script src="{% static 'plugins/modernizr-2.6.2.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
+	<script src="{% static 'plugins/jquery-1.11.1.min.js' %}"></script>
+	<!-- Twitter Bootstrap -->
+	<script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
 
     <style type="text/css">
         * {
@@ -100,12 +106,12 @@
             <a class="navbar-brand" href="{% url 'home' %}" style="">
                 <b style="color: whitesmoke; font-size: x-large">Bian Lab</b>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse navbar-right" id="navbar">
                 <ul class="navbar-nav ml-auto text-center" id="nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="{% url 'home' %}">Home</a>
