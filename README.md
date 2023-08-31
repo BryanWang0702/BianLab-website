@@ -1,8 +1,6 @@
 # BianLab-website
 BianLab website, with Django + Bootstrap [BianLab](http://bianlab.site)
 
-[toc]
-
 # Installation
 ### Create enviroment
 #### Install miniconda
