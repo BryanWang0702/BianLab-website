@@ -1,9 +1,11 @@
 # BianLab-website
-BianLab website, with Django + Bootstrap
+BianLab website, with Django + Bootstrap [BianLab](http://bianlab.site)
+
+[toc]
 
 # Installation
 ### Create enviroment
-1. Install miniconda
+#### Install miniconda
 ```shell
 wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py38_4.9.2-Linux-x86_64.sh
 chmod +x Miniconda3-py38_4.9.2-Linux-x86_64.sh
@@ -13,7 +15,7 @@ chmod +x Miniconda3-py38_4.9.2-Linux-x86_64.sh
 source ~/.bashrc
 ```
 
-2. Install mysql-5.7 and create a database for project
+#### Install mysql-5.7 and create a database for project
 ```shell
 wget https://downloads.mysql.com/archives/get/p/23/file/mysql-server_5.7.39-1ubuntu18.04_amd64.deb-bundle.tar
 
@@ -44,7 +46,7 @@ mysql -uroot -p
 create database bianlab;
 ```
 
-3. Get source code and create a enviroment for code
+#### Get source code and create a enviroment for code
 ```shell
 git config --global user.name "YOURNAME"
 git config --global user.email "YOUREMAIL"
@@ -61,7 +63,7 @@ cd BianLab-website
 pip install -r requirements.txt
 ```
 
-4. Install nginx and configure
+#### Install nginx and configure
 ```shell
 sudo apt-get install nginx -y
 cd /etc/nginx
@@ -99,7 +101,7 @@ server {
 }
 ```
 
-5. Install and configure the Uwsgi
+#### Install and configure the Uwsgi
 ```shell
 # Install Uwsgi
 conda install uwsgi
@@ -130,8 +132,8 @@ daemonize=uwsgi.log
 
 ```
 
-# Configure
-1. Set the `settings.py` in `BianLab-website/bianweb_v2`
+### Configure
+#### Set the `settings.py` in `BianLab-website/bianweb_v2`
 ```shell
 vim bianweb_v2/settings.py
 
@@ -139,7 +141,7 @@ vim bianweb_v2/settings.py
 # Save and quit
 
 ```
-2. Move the data into mysql server
+#### Move the data into mysql server
 ```shell
 # Migrate data
 python manage.py makemigrations
@@ -149,15 +151,15 @@ python manage.py migrate
 python manage.py collectstatic
 ```
 
-3. Create a superuser to manager the website
+#### Create a superuser to manager the website
 ```shell
 python manage.py createsuperuser
 ```
 
-4. Start the server
+#### Start the server
 ```shell
 systemctl start nginx
 uwsgi --ini uwsgi.ini
 ```
 
-5. Now you can check your site!
+#### Now you can check your site!
